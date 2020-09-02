@@ -1,0 +1,32 @@
+create table ESTACION (
+   ID                   int                  not null,
+   ID_SECTOR            int                  not null,
+   INSTRUCTORES         int                  null,
+   APIRANTES            int                  null,
+   constraint PK_ESTACION primary key (ID, ID_SECTOR)
+)
+
+
+/*==============================================================*/
+/* Table: SECTOR                                                */
+/*==============================================================*/
+create table SECTOR (
+   ID_SECTOR            int                  not null,
+   NOMBRE_SECTOR        varchar(20)          null,
+   constraint PK_SECTOR primary key (ID_SECTOR)
+)
+
+
+/*==============================================================*/
+/* Table: SUBTENIENTES                                          */
+/*==============================================================*/
+create table SUBTENIENTES (
+   ID                   int                  not null,
+   NOMBRES              varchar(25)          null,
+   APELLIDOS            varchar(25)          null,
+   DIRECCION            varchar(25)          null,
+   TELEFONO             varchar(10)          null,
+   FECHA_DE_NACIMIENTO  date             null,
+   ANOS_DE_SERVICIO     int                  null,
+   constraint PK_SUBTENIENTES primary key (ID)
+)
